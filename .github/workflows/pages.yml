@@ -28,10 +28,18 @@ jobs:
 
       - name: Prepare site
         run: |
-          mkdir _site
-          cp index.html _site/
-          cp -r src _site/
-          cp -r public _site/
+          mkdir -p _site
+          if [ -f index.html ]; then
+            cp index.html _site/
+          elif [ -f src/index.html ]; then
+            cp src/index.html _site/
+          fi
+          if [ -d src ]; then
+            cp -r src _site/
+          fi
+          if [ -d public ]; then
+            cp -r public _site/
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
