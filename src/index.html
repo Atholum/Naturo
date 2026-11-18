@@ -11,7 +11,7 @@
     <div class="navbar">
         <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
             <img src="../public/naturo-logo.png" alt="Logo Naturo">
-            <span>Naturo</span>
+            <span>Deom Magalie - Naturopathe</span>
         </a>
 
         <nav aria-label="Navigation principale">
@@ -63,11 +63,11 @@
                 </p>
 
                 <div class="specialites">
-                    <div class="specialite">Stress</div>
-                    <div class="specialite">Digestion</div>
-                    <div class="specialite">Fatigue</div>
-                    <div class="specialite">Inflammation</div>
-                    <div class="specialite">Alimentation végétarienne</div>
+                    <a href="stress.html" class="specialite">Stress</a>
+                    <a href="digestion.html" class="specialite">Digestion</a>
+                    <a href="fatigue.html" class="specialite">Fatigue</a>
+                    <a href="inflammation.html" class="specialite">Inflammation</a>
+                    <a href="alimentation-vegetarienne.html" class="specialite">Alimentation végétarienne</a>
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="card contact-card">
-            <form>
+            <form id="contact-form">
                 <div class="form-row">
                     <div>
                         <label for="name">Nom</label>
@@ -211,7 +211,8 @@
                     <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
                 </div>
 
-                <button type="submit">Envoyer le message</button>
+                <button type="submit" id="send-btn">Envoyer le message</button>
+                <p id="form-status" style="margin-top: 10px; font-weight: bold;"></p>
             </form>
         </div>
     </section>
@@ -220,5 +221,7 @@
 <footer>
     <p>© 2026 Naturo — Accompagnement naturel et bien-être</p>
 </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

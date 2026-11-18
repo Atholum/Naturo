@@ -29,11 +29,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          if [ -f index.html ]; then
-            cp index.html _site/
-          elif [ -f src/index.html ]; then
-            cp src/index.html _site/
-          fi
+          cp *.html _site/ 2>/dev/null || true
           if [ -d src ]; then
             cp -r src _site/
           fi
